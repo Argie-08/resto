@@ -1,6 +1,13 @@
 import React from "react";
-import axios from "axios";
+import { Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Homepage from "./views/Homepage";
+import MenuView from "./views/MenuView";
+import MainMenu from "./views/MainMenu";
+import About from "./views/About";
+import Contact from "./views/Contact";
+import Restonavbar from "./components/restonavbar";
+import Footer from "./components/Footer";
 import "./App.css";
 
 const App = () => {
@@ -15,27 +22,22 @@ const App = () => {
         console.error("Error fetching JSON:", error);
       }
     }
-
     fetchData();
   }, []);
 
+  console.log(data);
+
   return (
     <div>
-      <h1>JSON Data</h1>
-      <ul>
-        {data.map((item, index) => (
-          <li key={index}>
-            <h2>{item.name}</h2>
-            <p>Category: {item.category}</p>
-            <p>Price: ${item.price.toFixed(2)}</p>
-            <img
-              src={item.image.desktop}
-              alt={`${item.name} thumbnail`}
-              style={{ width: "100px" }}
-            />
-          </li>
-        ))}
-      </ul>
+      <Restonavbar />
+      <Routes>
+        <Route path="/" element={<Homepage />}></Route>
+        <Route path="/menuView" element={<MenuView />}></Route>
+        <Route path="/menu" element={<MainMenu />}></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
+      </Routes>
+      <Footer />
     </div>
   );
 };

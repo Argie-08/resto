@@ -1,0 +1,265 @@
+.hero .container {
+  height: fit-content;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero {
+  background: url("../assets/hero.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 1rem;
+}
+.hero form {
+  background-color: #ffffff;
+  padding: 40px;
+}
+.hero form div:nth-child(1) p:nth-child(1) {
+  font-size: 1rem;
+  color: #349705;
+  margin: 0;
+}
+.hero form div:nth-child(1) p:nth-child(2) {
+  font-size: 2rem;
+  color: #000000;
+}
+
+.hero form .inter {
+  font-family: Inter;
+  font-size: 14px;
+  margin-bottom: 0.5rem;
+}
+.hero form span {
+  font-family: Inter;
+  font-size: 14px;
+}
+.hero form input {
+  width: 100%;
+  height: 28px;
+  padding: 18px 16px;
+  border: solid 1px #dee2e6;
+  font-family: Inter;
+  border-radius: 0px;
+}
+.hero form input:focus {
+  outline: solid 1px rgba(0, 0, 0, 0.5);
+  box-shadow: none;
+}
+.hero form span {
+  width: 100%;
+}
+.hero .p-calendar:not(.p-calendar-disabled).p-focus > .p-inputtext {
+  box-shadow: none;
+  border-color: none;
+}
+.hero .p-dropdown {
+  width: 100%;
+  height: 28px;
+  border-radius: 0px;
+}
+
+.hero .p-dropdown {
+  padding: 8px 16px;
+  height: 100%;
+}
+.hero .pi-calendar,
+.hero .pi-clock {
+  position: absolute;
+  top: 70%;
+  right: 0%;
+  transform: translateY(-50%) translateX(-50%);
+  font-size: 1.5rem;
+}
+.hero button {
+  width: 100%;
+  padding: 10px 0px;
+  background-color: #349705;
+  color: #ffffff;
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+.hero button:hover {
+  background-color: #226404;
+}
+.hero .p-dropdown:not(.p-disabled).p-focus {
+  box-shadow: none !important;
+  border: solid 1px rgba(0, 0, 0, 0.5);
+}
+.hero .p-dropdown:not(.p-disabled):hover {
+  border: solid 1px rgba(0, 0, 0, 0.5);
+}
+.hero .heroText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  height: 100%;
+}
+.hero .heroText p {
+  font-size: 60px;
+  font-weight: 700;
+  color: #ffffff;
+  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 1));
+}
+.hero .heroText p:nth-child(2) {
+  font-size: 16px;
+  color: #5e5e5e;
+  font-family: Inter;
+}
+
+.hero .heroBtnContainer button {
+  font-weight: 700;
+  font-size: 16px;
+  padding: 10px 0px;
+  width: 172px;
+  transition: all 0.3s ease-in-out;
+}
+.hero .heroBtnContainer button:nth-child(1) {
+  border: none;
+  background-color: #349705;
+  color: #ffffff;
+}
+.hero .heroBtnContainer button:nth-child(1):hover {
+  background-color: #226404;
+}
+.hero .heroBtnContainer button:nth-child(2) {
+  border: solid 2px #349705;
+  background-color: transparent;
+  color: #ffffff;
+}
+.hero .heroBtnContainer button:nth-child(2):hover {
+  border: solid 2px #226404;
+  background-color: #226404;
+}
+.hero .heroContact div p:nth-child(1) {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.hero .heroContact div p:nth-child(2) {
+  font-size: 20px;
+  font-weight: 700;
+  color: #349705;
+}
+.hero .heroContact .bookText {
+  font-size: 16px;
+  font-family: Inter;
+  color: #5e5e5e;
+}
+.p-timepicker {
+  justify-content: start;
+  padding-left: 2rem;
+}
+.p-dropdown-items-wrapper ul {
+  padding-left: 3rem;
+}
+.p-dropdown-item {
+  padding: 0.5rem 0;
+}
+.p-dialog-header,
+.p-dialog-content {
+  padding: 1rem 2rem;
+}
+.p-dialog-header {
+  text-align: center;
+}
+.headerDiv {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+.headerDiv p {
+  font-family: Inter;
+}
+#dialogLogo {
+  height: 25px;
+  width: 25px;
+}
+.p-dialog label {
+  font-family: Inter;
+  font-size: 14px;
+  min-width: 130px;
+}
+.p-dialog input {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+}
+.p-dialog #bookingBtn {
+  width: 100%;
+  padding: 10px 0px;
+  background-color: #349705;
+  color: #ffffff;
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+.p-dialog #bookingBtn:hover {
+  background-color: #226404;
+}
+.p-dialog #verifyOTP {
+  width: 100%;
+  padding: 10px 0px;
+  background-color: #349705;
+  color: #ffffff;
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+.p-dialog #verifyOTP:hover {
+  background-color: #226404;
+}
+.p-inputotp-input {
+  width: 100%;
+  height: 50px;
+  padding: 10px 16px;
+  border: solid 1px #dee2e6;
+  font-family: Inter;
+  border-radius: 0px;
+  margin-bottom: 2rem;
+}
+.p-inputotp-input:focus {
+  box-shadow: 0 0 0 0.2rem #33970570;
+}
+.no-border {
+  border: none;
+  outline: none;
+}
+.no-border:focus {
+  border: none;
+  outline: none;
+}
+@media screen and (max-width: 767px) {
+  .hero .heroText {
+    margin-bottom: 6rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .hero .heroContact div p {
+    text-align: end;
+  }
+  .hero .heroContact div {
+    display: flex;
+    flex-direction: column;
+  }
+  .hero .bookText {
+    text-align: end;
+  }
+  .headerDiv {
+    flex-direction: column;
+  }
+  .responsiveInput::placeholder {
+    font-size: 10px;
+  }
+}

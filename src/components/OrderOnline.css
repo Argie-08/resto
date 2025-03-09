@@ -1,0 +1,93 @@
+#orderOnline .col-12 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#orderOnline .col-12 span {
+  font-size: 16px;
+}
+#orderOnline .onlineTitle {
+  font-size: 50px;
+  font-weight: 600;
+  color: #000000;
+}
+#orderOnline .onlineTitle + p {
+  font-size: 16px;
+  font-family: Inter;
+  color: #5e5e5e;
+}
+
+#orderOnline .menuContainer {
+  margin-bottom: 62px;
+  width: 100%;
+  padding: 0px 2rem;
+}
+#orderOnline .menuContainer h2 {
+  font-size: 28px;
+  text-decoration: underline;
+  text-decoration-color: #349705;
+}
+#orderOnline .menuContainer h2 + p {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: Inter;
+  text-decoration-color: #349705;
+  cursor: pointer;
+}
+#orderOnline .menu-list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: start;
+  padding: 10px 0;
+}
+#orderOnline .menu-list li div div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#orderOnline .menu-list li img {
+  height: 84px;
+  width: 84px;
+}
+#orderOnline .menu-list p {
+  font-size: 16px;
+  font-family: Inter;
+  color: #5e5e5e;
+}
+
+#orderOnline .item-name,
+#orderOnline .item-price {
+  font-size: 20px;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+#orderOnline .dots {
+  flex: 1;
+  margin: 0 10px;
+  border-bottom: 2px dotted #d9d9d9;
+}
+#orderOnline .align-items-center p {
+  color: #349705;
+  font-size: 16px;
+  font-family: Inter;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+#orderOnline .align-items-center p:hover {
+  color: #226404;
+}
+@media screen and (max-width: 576px) {
+  #orderOnline .menuContainer h2 {
+    font-size: 20px;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  #orderOnline .menuContainer {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,62 @@
+.navbarContainer {
+  background: #000000;
+}
+.navbarContainerScroll {
+  background-color: #000000;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.5));
+  animation: slideDown 0.5s ease-in-out forwards;
+}
+.navbar {
+  padding: 15px 0px 15px 0px;
+}
+.navbar li {
+  color: #ffffff;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.navbar li:hover {
+  color: #349705;
+}
+.navbar .active {
+  color: #349705;
+}
+.navbar-toggler {
+  background-color: #ffffff;
+}
+.container-fluid {
+  max-width: 1800px;
+  height: 40px;
+}
+.navbar span {
+  color: #ffffff;
+}
+.navbar img {
+  height: 30px;
+  cursor: pointer;
+}
+.offcanvas-title img {
+  height: 40px;
+}
+.offcanvas {
+  background-color: rgba(0, 0, 0, 0.95);
+  padding: 2rem;
+}
+.offcanvas-header .btn-close {
+  color: #ffffff !important;
+}
+.offcanvas-body a {
+  color: #ffffff;
+  font-size: 16px;
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0vh);
+  }
+}

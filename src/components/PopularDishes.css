@@ -1,0 +1,88 @@
+#popDishes {
+  padding-bottom: 4rem;
+  height: 100%;
+  width: 100%;
+}
+#popDishes .headerTitleCenter span {
+  font-size: 16px;
+  font-weight: bold;
+}
+#popDishes .col-sm-12 div p:nth-child(2) {
+  font-size: 50px;
+  font-weight: 700;
+  color: #000000;
+}
+#popDishes .col-sm-12 div p:nth-child(3) {
+  font-size: 16px;
+  color: #5e5e5e;
+  font-family: Inter;
+  width: 697px;
+  text-align: center;
+}
+#popDishes .card {
+  width: 100%;
+  height: fit-content;
+  border: none;
+}
+#popDishes .card img {
+  width: 100%;
+  object-fit: cover;
+}
+#popDishes .card-title {
+  font-size: 24px;
+  font-weight: 600px;
+  color: #000000;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#popDishes .card-text {
+  font-size: 16px;
+  color: #5e5e5e;
+  font-family: Inter;
+  text-align: center;
+  width: 260px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#popDishes .card-body {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 576px) {
+  #popDishes {
+    padding-bottom: 1rem;
+  }
+  #popDishes .card {
+    margin-bottom: 2rem;
+    height: 300px;
+  }
+  #popDishes .card img {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  #popDishes .col-sm-12 div p:nth-child(3) {
+    width: 100%;
+    text-align: start;
+  }
+  #popDishes .card-text {
+    width: 100%;
+    text-align: start;
+  }
+  #popDishes .card {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  #popDishes .card-text {
+    width: 100%;
+  }
+}

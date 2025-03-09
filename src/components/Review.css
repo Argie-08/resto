@@ -1,0 +1,67 @@
+#review .container {
+  padding: 50px 0px;
+}
+#review .col-12 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#review .col-12 p {
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+}
+
+#review .swiper-slide p {
+  color: #000000;
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 100;
+}
+#review .fa-quote-left {
+  width: 50px;
+  height: 38px;
+  color: #89d22c;
+}
+#review small {
+  font-size: 16px;
+  color: #5e5e5e;
+  font-family: Inter;
+}
+#review .carousel {
+  width: 100%;
+  position: relative;
+}
+#review .carousel-indicators button {
+  background-color: #349705;
+}
+#review .carousel img {
+  width: 100%;
+  object-fit: cover;
+  height: 500px;
+}
+#review .carousel h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+}
+#review .carousel p {
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: normal;
+  color: #000000;
+}
+#review #reviewer {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  z-index: -1;
+}
+.carousel-caption {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}

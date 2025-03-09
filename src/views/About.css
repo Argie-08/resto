@@ -1,0 +1,274 @@
+#about {
+  width: 100%;
+}
+#about .heroContainer p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 62px;
+}
+#about .creativeResto {
+  padding: 60px 72px;
+  display: grid;
+  grid-template-columns: 526px fit-content(100%);
+  column-gap: 134px;
+}
+#about .creativeResto div:first-child img:first-child {
+  height: 580px;
+  width: 416px;
+  object-fit: cover;
+}
+#about .creativeResto div:first-child img:last-child {
+  height: 416px;
+  width: 306px;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-15%, -50%);
+}
+#about .creativeResto div:last-child p:nth-child(2) {
+  color: #000000;
+  font-size: 40px;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 20px;
+}
+#about .creativeResto div:last-child p:nth-child(3) {
+  color: #5e5e5e;
+  font-size: 20px;
+  font-family: Inter;
+  margin: 0;
+}
+#about #logo {
+  height: 40px;
+  width: fit-content;
+}
+#about div #logo + p {
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 500;
+  color: #349705;
+}
+
+#about .ourTeam {
+  padding: 60px 72px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+#about .ourTeam h3 {
+  font-size: 50px;
+  color: #000000;
+  font-weight: 600;
+}
+#about .ourTeam h4 {
+  font-size: 40px;
+  color: #000000;
+  font-weight: 600;
+}
+#about .ourTeam h4 + p {
+  font-size: 20px;
+  color: #5e5e5e;
+  font-family: Inter;
+}
+#about .box {
+  height: 416px;
+  width: 416px;
+  background-color: #349705;
+  position: absolute;
+  bottom: 0;
+}
+#about #chef1 {
+  position: absolute;
+  top: 0;
+  height: 416px;
+  width: 416px;
+  object-fit: cover;
+}
+#about #chef1 + div {
+  position: absolute;
+  bottom: 0;
+  margin-left: 20px;
+}
+#about #chef1 + div h4 {
+  color: #ffffff;
+  font-size: 32px;
+}
+#about #chef1 + div p {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: Inter;
+}
+#about .card img {
+  padding: 24px;
+  height: 416px;
+  width: 416px;
+}
+#about .card {
+  border: solid 1px #349705;
+  border-radius: 0;
+}
+#about .card h5 {
+  font-size: 24px;
+  color: #000000;
+  text-align: center;
+}
+#about .card p {
+  font-size: 16px;
+  color: #5e5e5e;
+  font-family: Inter;
+  text-align: center;
+}
+#about .fa-facebook,
+#about .fa-twitter,
+#about .fa-instagram {
+  height: 28px;
+  width: 28px;
+  color: #349705;
+  cursor: pointer;
+}
+#about .counter img {
+  height: 735px;
+  width: 100%;
+  object-fit: cover;
+}
+#about .column1 {
+  width: 264px;
+  gap: 12px;
+}
+#about .columnbase {
+  gap: 32px;
+}
+#about .column1 p {
+  color: #349705;
+  font-family: Inter;
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+}
+#about .column1 p + p {
+  color: #000000;
+  font-size: 24px;
+  font-weight: 500;
+  font-family: Fraunces;
+}
+#about .column1 p + p + p {
+  color: #5e5e5e;
+  font-size: 16px;
+  font-family: Inter;
+}
+#about .news {
+  padding: 60px 72px;
+  gap: 40px;
+}
+#about .card-data {
+  position: absolute;
+  padding: 24px;
+  bottom: 0;
+}
+#about .card-data p {
+  font-size: 14px;
+  color: #5e5e5e;
+  font-family: Inter;
+}
+#about .card-data p + p {
+  font-size: 24px;
+  color: #ffffff;
+}
+#about .card-data p + p + p {
+  font-size: 16px;
+  color: #349705;
+  font-family: Inter;
+}
+
+#about .newsCard {
+  height: 410px;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+}
+#about .newsCard img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  padding: 0;
+  border-radius: 0;
+}
+@media (max-width: 992px) {
+  #about .creativeResto {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+  #about .newsCard {
+    margin-bottom: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  #about .creativeResto div:first-child img:first-child {
+    height: 480px;
+    width: 416px;
+  }
+  #about .creativeResto div:first-child img:last-child {
+    height: 316px;
+    width: 306px;
+  }
+  #about .box {
+    height: 316px;
+    width: 316px;
+  }
+  #about #chef1 {
+    height: 380px;
+    width: 380px;
+  }
+  #about .counter img {
+    height: 600px;
+    margin-bottom: 2rem;
+  }
+  #about .columnbase {
+    margin-bottom: 4rem;
+  }
+}
+@media (max-width: 576px) {
+  #about .creativeResto div:first-child img:first-child {
+    height: 380px;
+    width: 216px;
+  }
+  #about .col-12 {
+    padding: 0 !important;
+  }
+  #about .creativeResto div:first-child img:last-child {
+    height: 216px;
+    width: 106px;
+    transform: translate(10%, -50%);
+  }
+  #about .ourTeam h4 {
+    text-align: center;
+  }
+  #about .ourTeam h4 + p {
+    text-align: center !important;
+  }
+  #about .box {
+    width: 100%;
+  }
+
+  #about #chef1 {
+    height: 350px;
+    width: 250px;
+  }
+  #about .counter img {
+    height: 400px;
+  }
+  #about .counter {
+    padding: 0px 1rem !important;
+  }
+  #about .newsCard {
+    height: 310px;
+  }
+  #about .news {
+    padding: 10px 10px;
+    gap: 40px;
+  }
+}

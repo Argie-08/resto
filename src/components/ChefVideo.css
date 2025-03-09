@@ -1,0 +1,72 @@
+#chefvideo {
+  height: 520px;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+#chefvideo video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+#chefvideo div {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+}
+#chefvideo div p:nth-child(1) {
+  font-size: 40px;
+  font-weight: 400;
+  color: #ffffff;
+}
+#chefvideo div p:nth-child(2) {
+  font-size: 16px;
+  font-family: Inter;
+  color: #ffffff;
+}
+#chefvideo .fa-circle-play {
+  height: 60px;
+  width: 60px;
+  color: #349705;
+  cursor: pointer;
+  position: absolute;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  transition: all 0.2s;
+}
+#chefvideo .fa-circle-pause {
+  height: 60px;
+  width: 60px;
+  color: #ffffff;
+  cursor: pointer;
+  position: absolute;
+  z-index: 9999;
+  height: 60px;
+  width: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+#chefvideo:hover .fa-circle-play {
+  color: #ffffff;
+  opacity: 1;
+}
+#chefvideo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  #chefvideo {
+    height: 600px;
+  }
+}

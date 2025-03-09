@@ -1,0 +1,60 @@
+#starters {
+  padding: 60px 0px 0px 0px;
+}
+#starters .w-100 img {
+  height: 480px;
+  width: 100%;
+  object-fit: cover;
+}
+#starters .w-100 img + p {
+  position: absolute;
+  left: 5%;
+  bottom: 10%;
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: 600;
+}
+#starters .w-100 img + p::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #349705;
+  height: 0.5rem;
+}
+#starters .menu-list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: start;
+  padding: 10px 0;
+}
+#starters .menu-list li div div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#starters .menu-list li img {
+  height: 84px;
+  width: 84px;
+}
+#starters .menu-list p {
+  font-size: 16px;
+  font-family: Inter;
+  color: #5e5e5e;
+}
+
+#starters .item-name,
+#starters .item-price {
+  font-size: 20px;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+#starters .dots {
+  flex: 1;
+  margin: 0 10px;
+  border-bottom: 2px dotted #d9d9d9;
+}

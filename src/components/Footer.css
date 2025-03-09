@@ -1,0 +1,35 @@
+#footer {
+  background: #000000;
+}
+#footer img {
+  height: 30px;
+}
+#footer .w-100 p {
+  font-family: Inter;
+  font-size: 20px;
+  margin: 0px;
+  color: #ffffff;
+}
+#footer .container h5 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+#footer .container p {
+  font-size: 16px;
+  font-family: Inter;
+  color: #ffffff;
+  margin: 0px;
+}
+#footer .container h3 {
+  color: #349705;
+  font-size: 24px;
+}
+#footer .text-center p {
+  font-size: 16px;
+  font-family: Inter;
+  color: #ffffff;
+  margin: 0px;
+  opacity: 0.5;
+}

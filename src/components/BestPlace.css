@@ -1,0 +1,68 @@
+#bestplace {
+  padding-bottom: 72px;
+}
+
+#bestplace .placeImageContainer {
+  height: 600px;
+}
+#bestplace .placeImageContainer img {
+  height: 540px;
+  object-fit: cover;
+  width: 60%;
+}
+#bestplace .placeImageContainer img:nth-child(1) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+#bestplace .placeImageContainer img:nth-child(2) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#bestplace .headerTitleRight span {
+  font-size: 16px;
+  font-weight: bold;
+}
+#bestplace .row .col-md-5 div p:nth-child(2) {
+  font-size: 40px;
+  color: #000000;
+  margin: 0;
+}
+#bestplace .row .col-md-5 div p:nth-child(3) {
+  font-size: 16px;
+  color: #5e5e5e;
+  font-family: Inter;
+  margin: 0;
+}
+#bestplace button {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 600;
+  padding: 0px 12px;
+  border: none;
+  height: 40px;
+  width: fit-content;
+  background-color: #349705;
+  margin-top: 2rem;
+  transition: all 0.2s ease-in-out;
+}
+#bestplace button:hover {
+  background-color: #226404;
+}
+@media screen and (max-width: 576px) {
+  #bestplace .placeImageContainer img {
+    height: 440px;
+  }
+  #bestplace .placeImageContainer {
+    height: 500px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #bestplace .placeImageContainer {
+    margin-bottom: 3rem;
+  }
+}

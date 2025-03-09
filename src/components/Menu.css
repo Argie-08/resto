@@ -1,0 +1,63 @@
+.splendidMenu {
+  padding: 72px 30px;
+  height: fit-content;
+}
+
+.splendidMenu .menuTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+}
+.splendidMenu .menuTitle::before,
+.splendidMenu .menuTitle::after {
+  content: "";
+  flex: 1;
+  border-top: 2px solid #349705;
+  margin: 0 1rem;
+}
+.menuTitle span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #349705;
+}
+.splendidMenu div p {
+  font-weight: 700;
+  color: #000000;
+  font-size: 50px;
+}
+.splendidMenu .card {
+  height: 420px;
+  width: 100%;
+}
+.splendidMenu img {
+  height: 100%;
+  object-fit: cover;
+}
+.splendidMenu .card p {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.splendidMenu .card button {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  font-family: Inter;
+  background-color: #349705;
+  padding: 10px;
+  border: none;
+  width: 126px;
+  transition: all 0.2s ease-in-out;
+}
+.splendidMenu .card button:hover {
+  background-color: #226404;
+}
+.splendidMenu .card div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
