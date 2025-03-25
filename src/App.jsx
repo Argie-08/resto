@@ -6,7 +6,7 @@ import MenuView from "./views/MenuView";
 import MainMenu from "./views/MainMenu";
 import About from "./views/About";
 import Contact from "./views/Contact";
-import Restonavbar from "./components/restonavbar";
+import Restonavbar from "./components/Restonavbar";
 import Footer from "./components/Footer";
 import { AppContext } from "./AppContext";
 import "./App.css";
