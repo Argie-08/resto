@@ -31,12 +31,10 @@ const App = () => {
     if (data === "desserts") {
       setModalTitle("Sweet Desserts");
       setModalVariance("Desserts");
-    }
-    if (data === "coffee") {
+    } else if (data === "coffee") {
       setModalTitle("Amazing Coffee");
       setModalVariance("Coffee");
-    }
-    if (data === "main-menu") {
+    } else if (data === "main-menu") {
       setModalTitle("Best Breakfasts");
       setModalVariance("Menu");
     } else {
