@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import VideoChef from "../assets/1c-a.mp4";
+import VideoChef from "../assets/videochef2.mp4";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlay, faCirclePause } from "@fortawesome/free-solid-svg-icons";
 import Breakfast from "../assets/breakfast.png";

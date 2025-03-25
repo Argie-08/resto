@@ -10,6 +10,10 @@
 #gallery .row > * {
   padding: 0;
 }
+#gallery .row {
+  --bs-gutter-x: 0;
+}
+
 #gallery {
   padding-bottom: 60px;
   /* height: 718px; */
@@ -99,7 +103,7 @@
     padding: 92px 20px;
   }
   #gallery .innerLeft {
-    margin-left: 10px;
+    /* margin-left: 10px; */
   }
   #gallery .col-12 img,
   #gallery .col-4 img {

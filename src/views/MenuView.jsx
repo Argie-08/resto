@@ -4,9 +4,17 @@ import Starters from "../menu/Starters";
 import MainCourse from "../menu/MainCourse";
 import Pizza from "../menu/Pizza";
 import Drinks from "../menu/Drinks";
+import { useNavigate } from "react-router-dom";
 import "./MenuView.css";
 
 const MenuView = () => {
+  const navigate = useNavigate();
+
+  const navigateContact = (e) => {
+    e.preventDefault();
+    navigate("/contact");
+  };
+
   return (
     <div id="menuView">
       <div className="heroContainer">
@@ -42,7 +50,7 @@ const MenuView = () => {
               sunt expedita commodi.
             </p>
           </div>
-          <button>Make a reservation</button>
+          <button onClick={navigateContact}>Make a reservation</button>
         </div>
       </div>
     </div>

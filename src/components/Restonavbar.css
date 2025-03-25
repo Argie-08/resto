@@ -12,6 +12,13 @@
 .navbar {
   padding: 15px 0px 15px 0px;
 }
+.navbar-nav li {
+  color: #ffffff;
+  font-size: 16px;
+}
+.navbar-nav .active {
+  color: #349705;
+}
 .navbar li {
   color: #ffffff;
   font-size: 16px;
@@ -45,8 +52,8 @@
   background-color: rgba(0, 0, 0, 0.95);
   padding: 2rem;
 }
-.offcanvas-header .btn-close {
-  color: #ffffff !important;
+.offcanvas-header button {
+  background: #505050;
 }
 .offcanvas-body a {
   color: #ffffff;

@@ -7,16 +7,16 @@ import "./Gallery.css";
 
 const Gallery = () => {
   return (
-    <div id="gallery">
-      <Row className="h-100">
+    <div id="gallery" className="w-100 ">
+      <Row className="h-100 w-100 ">
         <Col md={5} sm={12} xs={12} className="h-100">
-          <div className="galleryImageContainer position-relative">
-            <img src={Breakfast} alt="" />
-            <div className="innerText">
+          <div className="galleryImageContainer position-relative w-100">
+            <img src={Breakfast} alt="breakfast image" />
+            <div className="innerText w-100">
               <div className="headerTitleRight">
                 <span>RESTAURANT</span>
               </div>
-              <p>New offers and promotions</p>
+              <p className="w-100">New offers and promotions</p>
               <button>Learn more</button>
             </div>
           </div>
@@ -28,22 +28,22 @@ const Gallery = () => {
                 <img src={Cocktail} alt="" />
               </Col>
               <Col xs={6} className="h-100">
-                <div className="innerContainer">
+                <div className="innerContainer w-100">
                   <div className="headerTitleCenter">
                     <span>RESTAURANT</span>
                   </div>
-                  <p>View Full Menu</p>
+                  <p className="">View Full Menu</p>
                   <button>Learn More</button>
                 </div>
               </Col>
             </Row>
-            <Row className="h-50">
+            <Row className="h-50 w-100">
               <Col xs={6} className="h-100">
-                <div className="innerContainer innerLeft">
+                <div className="innerContainer innerLeft w-100 ">
                   <div className="headerTitleCenter">
                     <span>RESTAURANT</span>
                   </div>
-                  <p>Daily Specials</p>
+                  <p className="">Daily Specials</p>
                   <button>Learn More</button>
                 </div>
               </Col>
@@ -54,10 +54,10 @@ const Gallery = () => {
           </div>
         </Col>
         <Col md={2} sm={4} xs={4} className="h-100">
-          <div className="galleryImageContainer position-relative">
+          <div className="galleryImageContainer position-relative w-100">
             <img src={Cocktail} alt="" />
-            <div className="innerText centerText">
-              <div className="headerTitleCenter">
+            <div className="innerText centerText w-100">
+              <div className="headerTitleCenter w-100">
                 <span>RESTAURANT</span>
               </div>
               <p>Wine list</p>

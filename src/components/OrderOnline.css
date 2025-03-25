@@ -49,8 +49,10 @@
 }
 
 #orderOnline .menu-list li img {
-  height: 84px;
-  width: 84px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 #orderOnline .menu-list p {
   font-size: 16px;
@@ -61,13 +63,13 @@
 #orderOnline .item-name,
 #orderOnline .item-price {
   font-size: 20px;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   font-weight: 600;
 }
 
 #orderOnline .dots {
   flex: 1;
-  margin: 0 10px;
+  /* margin: 0 10px; */
   border-bottom: 2px dotted #d9d9d9;
 }
 #orderOnline .align-items-center p {

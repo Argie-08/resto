@@ -5,6 +5,7 @@
   height: 416px !important;
   width: 416px !important;
   border-radius: 50%;
+  object-fit: cover;
 }
 #mainstarter .col-12 div {
   width: 100%;

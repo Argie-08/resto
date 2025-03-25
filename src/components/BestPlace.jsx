@@ -5,8 +5,15 @@ import Col from "react-bootstrap/Col";
 import Bg1 from "../assets/place1.png";
 import Bg2 from "../assets/place2.png";
 import "./BestPlace.css";
+import { useNavigate } from "react-router-dom";
 
 const BestPlace = () => {
+  const navigate = useNavigate();
+
+  const navigateContact = (e) => {
+    e.preventDefault();
+    navigate("/contact");
+  };
   return (
     <div id="bestplace">
       <Container>
@@ -31,7 +38,7 @@ const BestPlace = () => {
                 minima ducimus similique quaerat incidunt? Praesentium, soluta
                 temporibus. Consequatur?
               </p>
-              <button>Make a reservation</button>
+              <button onClick={navigateContact}>Make a reservation</button>
             </div>
           </Col>
         </Row>

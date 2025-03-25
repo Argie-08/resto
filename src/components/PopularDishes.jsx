@@ -38,8 +38,8 @@ const PopularDishes = () => {
 
   return (
     <div id="popDishes">
-      <Container>
-        <Row>
+      <Container className="p-5 w-100">
+        <Row className="w-100">
           <Col sm={12} className="w-100 mb-4">
             <div className="w-100 d-flex flex-column justify-content-center align-items-center">
               <div className="headerTitleCenter mb-2">
@@ -54,7 +54,7 @@ const PopularDishes = () => {
             </div>
           </Col>
         </Row>
-        <Row>
+        <Row className="w-100">
           {dishes.map((dish, i) => (
             <Col md={3} sm={6} xs={6} key={i}>
               <Card>

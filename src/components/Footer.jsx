@@ -31,7 +31,7 @@ const Footer = () => {
             className="d-flex flex-column align-items-center mb-5"
           >
             <h5>Book a Table</h5>
-            <p className="mb-4">
+            <p className="mb-4 text-center">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum,
               in?
             </p>

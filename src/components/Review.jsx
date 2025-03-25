@@ -13,45 +13,29 @@ import carouselBg from "../assets/carouselBg.png";
 import "./Review.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const contentStyle = {
-  height: "50px",
-  width: "100%",
-  color: "#000000",
-  lineHeight: "50px",
-  textAlign: "center",
-  background: "red",
-  border: "1px solid black",
-};
-
 const Review = () => {
-  const testimonials = [
-    {
-      image: Breakfast,
-      name: "Dale Petersen",
-      role: "Guest",
-      feedback:
-        "Cras morbi consectetur viverra eleifend pellentesque dui. Senectus commodo morbi aliquet eget quis.",
-    },
-    {
-      image: Cocktail,
-      name: "John Doe",
-      role: "Customer",
-      feedback:
-        "Vel curabitur ut a id tempor. Vivamus non commodo vel ac aliquet.",
-    },
-    {
-      image: Coffee,
-      name: "Jane Smith",
-      role: "Client",
-      feedback:
-        "Euismod tincidunt sed quam pharetra laoreet nisl mollis vitae.",
-    },
-  ];
+  const [clients, setClients] = useState([]);
+
+  useEffect(() => {
+    const fetchClient = async () => {
+      try {
+        const response = await fetch("/data.json");
+        const jsonData = await response.json();
+        const filterClients = jsonData.filter(
+          (item) => item.category === "Client"
+        );
+        setClients(filterClients);
+      } catch (error) {
+        console.error("Error fetching JSON:", error);
+      }
+    };
+    fetchClient();
+  }, []);
 
   return (
     <div id="review">
       <Container>
-        <Row>
+        <Row className="w-100">
           <Col sm={12} xs={12}>
             <FontAwesomeIcon icon={faQuoteLeft} />
             <p>What our clients say about us</p>
@@ -59,21 +43,23 @@ const Review = () => {
           </Col>
           <Col sm={12} xs={12}>
             <Carousel>
-              {testimonials.map((testimonial, index) => (
+              {clients.map((client, index) => (
                 <Carousel.Item key={index}>
                   <img src={carouselBg} alt="Transparent Background" />
                   <Carousel.Caption>
                     <img
-                      src={testimonial.image}
+                      src={client.image}
                       alt="Reviewer Image"
                       id="reviewer"
                     />
                     <div>
-                      <h3>{testimonial.name}</h3>
-                      <p>{testimonial.role}</p>
+                      <h3>{client.name}</h3>
+                      <p>{client.category}</p>
                     </div>
-
-                    <p>{testimonial.feedback}</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Iste, voluptatibus!
+                    </p>
                   </Carousel.Caption>
                 </Carousel.Item>
               ))}

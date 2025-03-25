@@ -13,6 +13,7 @@ import "./Restonavbar.css";
 const Restonavbar = () => {
   const [navCss, setNavCss] = useState(false);
   const [active, setActive] = useState("Home");
+  const [show, setShow] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -43,6 +44,10 @@ const Restonavbar = () => {
     setActive("Home");
     navigate("/");
   };
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <div
       className={
@@ -54,12 +59,8 @@ const Restonavbar = () => {
           <Navbar.Brand>
             <img src={Logo} alt="eula logo" onClick={home} />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="offcanvasNavbar-expand-xxl" />
-          <Navbar.Offcanvas
-            id="offcanvasNavbar-expand-xxl"
-            aria-labelledby="offcanvasNavbarLabel-expand-xxl"
-            placement="end"
-          >
+          <Navbar.Toggle onClick={handleShow} />
+          <Navbar.Offcanvas show={show} onHide={handleClose} placement="end">
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id="offcanvasNavbarLabel-expand-xxl">
                 <img src={Logo} alt="eula logo" />
@@ -73,7 +74,10 @@ const Restonavbar = () => {
                     className={`${
                       location.pathname === pathMap[item] ? "active" : ""
                     }`}
-                    onClick={() => handleNav(item)}
+                    onClick={() => {
+                      handleNav(item);
+                      handleClose();
+                    }}
                   >
                     {item}
                   </li>

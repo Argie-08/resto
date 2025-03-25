@@ -1,11 +1,57 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Hero from "../assets/hero.png";
+import Starters from "/images/menu/starters/salmon.jpg";
+import MainCourse from "/images/imported/fish-main.jpg";
+import Pizza from "/images/imported/peperoni-pizza.jpg";
+import Beverages from "/images/menu/beverages/Strawberry-Lemonade.jpg";
+import { useNavigate } from "react-router-dom";
 import "./MainStarter.css";
 
 const MainStarter = () => {
+  const [starters, setStarters] = useState([]);
+  const [main, setMain] = useState([]);
+  const [pizza, setPizza] = useState([]);
+  const [beverages, setBeverages] = useState([]);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchMenu = async () => {
+      try {
+        const response = await fetch("/data.json");
+        const jsonData = await response.json();
+        const filterStaters = jsonData.filter(
+          (item) => item.category === "starters"
+        );
+        const filterMain = jsonData.filter(
+          (item) => item.category === "main-menu"
+        );
+        const filterBeverages = jsonData.filter(
+          (item) => item.category === "beverages"
+        );
+        const filterPizza = jsonData
+          .filter((item) => item.category === "pizza")
+          .sort(() => Math.random() - 0.5)
+          .slice(0, 3);
+
+        setStarters(filterStaters);
+        setMain(filterMain);
+        setPizza(filterPizza);
+        setBeverages(filterBeverages);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchMenu();
+  }, []);
+
+  const navigateContact = (e) => {
+    e.preventDefault();
+    navigate("/contact");
+  };
+
   return (
     <div>
       <div id="mainstarter">
@@ -17,46 +63,24 @@ const MainStarter = () => {
               lg={6}
               className="d-flex justify-content-center mb-5"
             >
-              <img src={Hero} alt="main starter image" />
+              <img src={Starters} alt="main starter image" />
             </Col>
             <Col sm={12} xs={12} lg={6}>
               <div className="d-flex flex-column justify-content-center w-100">
                 <h4>STARTERS</h4>
                 <ul className="menu-list">
-                  <li>
-                    <div className="w-100">
+                  {starters.map((item, i) => (
+                    <li key={i}>
                       <div className="w-100">
-                        <span className="item-name">Greek Salad</span>
-                        <span className="dots"></span>
-                        <span className="item-price">$6</span>
+                        <div className="w-100">
+                          <span className="item-name">{item.name} Menu</span>
+                          <span className="dots"></span>
+                          <span className="item-price">${item.price}</span>
+                        </div>
+                        <p className="m-0">Lorem ipsum dolor sit amet.</p>
                       </div>
-                      <p className="m-0">Lorem ipsum dolor sit amet.</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="w-100">
-                      <div className="w-100">
-                        <span className="item-name">Siamas Salad</span>
-                        <span className="dots"></span>
-                        <span className="item-price">$10</span>
-                      </div>
-                      <p className="m-0">
-                        Lorem ipsum dolor sit amet consectetur.
-                      </p>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="w-100">
-                      <div className="w-100">
-                        <span className="item-name">Siamas Salad</span>
-                        <span className="dots"></span>
-                        <span className="item-price">$10</span>
-                      </div>
-                      <p className="m-0">
-                        Lorem ipsum dolor sit amet consectetur.
-                      </p>
-                    </div>
-                  </li>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </Col>
@@ -68,46 +92,24 @@ const MainStarter = () => {
               lg={6}
               className="d-flex justify-content-center mb-5 phoneviewleft"
             >
-              <img src={Hero} alt="main starter image" />
+              <img src={MainCourse} alt="main starter image" />
             </Col>
             <Col sm={12} xs={12} lg={6} className="">
               <div className="d-flex flex-column justify-content-center w-100">
-                <h4>STARTERS</h4>
+                <h4>MAIN COURSE</h4>
                 <ul className="menu-list">
-                  <li>
-                    <div className="w-100">
+                  {main.map((item, i) => (
+                    <li key={i}>
                       <div className="w-100">
-                        <span className="item-name">Greek Salad</span>
-                        <span className="dots"></span>
-                        <span className="item-price">$6</span>
+                        <div className="w-100">
+                          <span className="item-name">{item.name}</span>
+                          <span className="dots"></span>
+                          <span className="item-price">${item.price}</span>
+                        </div>
+                        <p className="m-0">Lorem ipsum dolor sit amet.</p>
                       </div>
-                      <p className="m-0">Lorem ipsum dolor sit amet.</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="w-100">
-                      <div className="w-100">
-                        <span className="item-name">Siamas Salad</span>
-                        <span className="dots"></span>
-                        <span className="item-price">$10</span>
-                      </div>
-                      <p className="m-0">
-                        Lorem ipsum dolor sit amet consectetur.
-                      </p>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="w-100">
-                      <div className="w-100">
-                        <span className="item-name">Siamas Salad</span>
-                        <span className="dots"></span>
-                        <span className="item-price">$10</span>
-                      </div>
-                      <p className="m-0">
-                        Lorem ipsum dolor sit amet consectetur.
-                      </p>
-                    </div>
-                  </li>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </Col>
@@ -117,7 +119,7 @@ const MainStarter = () => {
               lg={6}
               className="d-flex justify-content-center mb-5 phoneviewright"
             >
-              <img src={Hero} alt="main starter image" />
+              <img src={MainCourse} alt="main starter image" />
             </Col>
           </Row>
           <Row className="mb-5">
@@ -127,46 +129,24 @@ const MainStarter = () => {
               lg={6}
               className="d-flex justify-content-center mb-5"
             >
-              <img src={Hero} alt="main starter image" />
+              <img src={Pizza} alt="main starter image" />
             </Col>
             <Col sm={12} xs={12} lg={6}>
               <div className="d-flex flex-column justify-content-center w-100">
                 <h4>PIZZA</h4>
                 <ul className="menu-list">
-                  <li>
-                    <div className="w-100">
+                  {pizza.map((item, i) => (
+                    <li key={i}>
                       <div className="w-100">
-                        <span className="item-name">Greek Salad</span>
-                        <span className="dots"></span>
-                        <span className="item-price">$6</span>
+                        <div className="w-100">
+                          <span className="item-name">{item.name} Pizza</span>
+                          <span className="dots"></span>
+                          <span className="item-price">${item.price}</span>
+                        </div>
+                        <p className="m-0">Lorem ipsum dolor sit amet.</p>
                       </div>
-                      <p className="m-0">Lorem ipsum dolor sit amet.</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="w-100">
-                      <div className="w-100">
-                        <span className="item-name">Siamas Salad</span>
-                        <span className="dots"></span>
-                        <span className="item-price">$10</span>
-                      </div>
-                      <p className="m-0">
-                        Lorem ipsum dolor sit amet consectetur.
-                      </p>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="w-100">
-                      <div className="w-100">
-                        <span className="item-name">Siamas Salad</span>
-                        <span className="dots"></span>
-                        <span className="item-price">$10</span>
-                      </div>
-                      <p className="m-0">
-                        Lorem ipsum dolor sit amet consectetur.
-                      </p>
-                    </div>
-                  </li>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </Col>
@@ -178,46 +158,24 @@ const MainStarter = () => {
               lg={6}
               className="d-flex justify-content-center mb-5 phoneviewleft"
             >
-              <img src={Hero} alt="main starter image" />
+              <img src={Starters} alt="main starter image" />
             </Col>
             <Col sm={12} xs={12} lg={6} className="">
               <div className="d-flex flex-column justify-content-center w-100">
-                <h4>STARTERS</h4>
+                <h4>BEVERAGES</h4>
                 <ul className="menu-list">
-                  <li>
-                    <div className="w-100">
+                  {beverages.map((item, i) => (
+                    <li key={i}>
                       <div className="w-100">
-                        <span className="item-name">Greek Salad</span>
-                        <span className="dots"></span>
-                        <span className="item-price">$6</span>
+                        <div className="w-100">
+                          <span className="item-name">{item.name}</span>
+                          <span className="dots"></span>
+                          <span className="item-price">${item.price}</span>
+                        </div>
+                        <p className="m-0">Lorem ipsum dolor sit amet.</p>
                       </div>
-                      <p className="m-0">Lorem ipsum dolor sit amet.</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="w-100">
-                      <div className="w-100">
-                        <span className="item-name">Siamas Salad</span>
-                        <span className="dots"></span>
-                        <span className="item-price">$10</span>
-                      </div>
-                      <p className="m-0">
-                        Lorem ipsum dolor sit amet consectetur.
-                      </p>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="w-100">
-                      <div className="w-100">
-                        <span className="item-name">Siamas Salad</span>
-                        <span className="dots"></span>
-                        <span className="item-price">$10</span>
-                      </div>
-                      <p className="m-0">
-                        Lorem ipsum dolor sit amet consectetur.
-                      </p>
-                    </div>
-                  </li>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </Col>
@@ -227,13 +185,13 @@ const MainStarter = () => {
               lg={6}
               className="d-flex justify-content-center mb-5 phoneviewright"
             >
-              <img src={Hero} alt="main starter image" />
+              <img src={Beverages} alt="main starter image" />
             </Col>
           </Row>
         </Container>
       </div>
       <div id="banner">
-        <img className="bannerImg" src={Hero} alt="" />
+        <img className="bannerImg" alt="" />
         <div className="d-flex flex-column align-items-center gap-4">
           <div className="w-100 d-flex flex-column justify-content-center align-items-center">
             <div className="headerTitleCenter mb-2">
@@ -246,7 +204,7 @@ const MainStarter = () => {
               sunt expedita commodi.
             </p>
           </div>
-          <button>Make a reservation</button>
+          <button onClick={navigateContact}>Make a reservation</button>
         </div>
       </div>
     </div>
